@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild & Wonderful | Animal Blog</title>
+  <meta name="description" content="Wild & Wonderful — stories, facts and inspiration from the animal world.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--ink:#173b32;--green:#2f6b58;--cream:#fffaf0;--gold:#d89b43;--soft:#eef5ef;--white:#fff}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--cream);color:#24352f;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(255,250,240,.94);backdrop-filter:blur(12px);border-bottom:1px solid #eadfca}
+    .nav-inner{max-width:1120px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-weight:900;font-size:1.2rem;color:var(--ink);letter-spacing:.3px}
+    .logo span{color:var(--gold)}
+    .links{display:flex;gap:22px;font-weight:650;font-size:.95rem}
+    .links a:hover{color:var(--green)}
+    .hero{max-width:1120px;margin:auto;padding:72px 22px 55px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+    .eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;margin-bottom:12px}
+    h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:.98;color:var(--ink);letter-spacing:-3px;margin-bottom:22px}
+    .hero p{font-size:1.12rem;max-width:620px;color:#53635d}
+    .btn{display:inline-block;margin-top:28px;background:var(--ink);color:#fff;padding:13px 21px;border-radius:999px;font-weight:800}
+    .btn:hover{transform:translateY(-2px);background:var(--green)}
+    .hero-card{background:linear-gradient(145deg,#dcebdd,#f8dcae);border-radius:34px;min-height:390px;display:grid;place-items:center;box-shadow:0 20px 60px #315b4920;position:relative;overflow:hidden}
+    .hero-animal{font-size:10rem;filter:drop-shadow(0 15px 12px #34543b2b)}
+    .hero-card small{position:absolute;bottom:18px;right:22px;background:#ffffffbb;padding:7px 12px;border-radius:999px;font-weight:700}
+    .section{max-width:1120px;margin:auto;padding:48px 22px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}
+    h2{font-size:2rem;color:var(--ink)}
+    .search{border:1px solid #d9d0bf;background:#fff;border-radius:999px;padding:11px 16px;width:240px;outline:none}
+    .search:focus{border-color:var(--green)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #eee3d0;border-radius:24px;overflow:hidden;box-shadow:0 8px 28px #294b3a0d;transition:.2s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 18px 35px #294b3a18}
+    .pic{height:180px;display:grid;place-items:center;font-size:5.5rem;background:var(--soft)}
+    .card-body{padding:20px}
+    .tag{display:inline-block;background:#edf4ef;color:var(--green);font-size:.75rem;font-weight:800;padding:5px 9px;border-radius:999px;margin-bottom:11px}
+    .card h3{font-size:1.25rem;color:var(--ink);margin-bottom:8px}
+    .card p{color:#64736d;font-size:.95rem}
+    .read{display:inline-block;margin-top:15px;color:var(--green);font-weight:800}
+    .about{background:var(--ink);color:#eef7f1;border-radius:30px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:35px}
+    .about h2{color:#fff}
+    .about p{color:#cfe0d7}
+    .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .fact{background:#ffffff12;border:1px solid #ffffff1d;border-radius:18px;padding:18px}
+    .fact b{font-size:1.4rem;display:block;color:#fff}
+    footer{margin-top:40px;padding:35px 22px;background:#102c25;color:#c5d6cf;text-align:center}
+    footer strong{color:#fff}
+    .empty{grid-column:1/-1;text-align:center;padding:30px;color:#65736e}
+    @media(max-width:800px){
+      .links{display:none}.hero{grid-template-columns:1fr;padding-top:45px}.hero-card{min-height:280px}
+      .grid{grid-template-columns:1fr}.about{grid-template-columns:1fr;padding:28px}.section-head{align-items:start;flex-direction:column}
+      .search{width:100%}h1{letter-spacing:-2px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#">Wild <span>&</span> Wonderful</a>
+      <div class="links">
+        <a href="#home">Home</a><a href="#stories">Stories</a><a href="#about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Animal stories • facts • nature</div>
+        <h1>Small moments from a wonderfully wild world.</h1>
+        <p>Discover curious animal facts, inspiring wildlife stories and simple ways to care about the creatures sharing our planet.</p>
+        <a class="btn" href="#stories">Explore stories →</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-animal">🦊</div>
+        <small>Meet the wild</small>
+      </div>
+    </section>
+
+    <section class="section" id="stories">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Latest posts</div>
+          <h2>Stories worth reading</h2>
+        </div>
+        <input id="search" class="search" type="search" placeholder="Search stories..." aria-label="Search stories">
+      </div>
+      <div id="posts" class="grid"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about">
+        <div>
+          <div class="eyebrow" style="color:#9bcbb4">About the blog</div>
+          <h2>Made for animal lovers.</h2>
+          <p style="margin-top:14px">Wild & Wonderful is a simple personal blog about animals, wildlife, nature and the little facts that make the natural world fascinating.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>6</b>featured stories</div>
+          <div class="fact"><b>100%</b>animal love</div>
+          <div class="fact"><b>24/7</b>curiosity</div>
+          <div class="fact"><b>∞</b>more to discover</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Wild & Wonderful</strong><br>
+    A GitHub Pages animal blog • Created by Sefali
+  </footer>
+
+  <script>
+    const posts = [
+      {emoji:"🐘",tag:"Wildlife",title:"Why Elephants Never Forget",text:"Explore the remarkable memory, communication and family bonds of elephants."},
+      {emoji:"🐧",tag:"Ocean",title:"A Day in the Life of a Penguin",text:"From icy mornings to ocean dives, discover how penguins survive and thrive."},
+      {emoji:"🐆",tag:"Big Cats",title:"The Secret World of Leopards",text:"Learn how these quiet, powerful cats adapt to forests, grasslands and cities."},
+      {emoji:"🦋",tag:"Nature",title:"The Beautiful Journey of a Butterfly",text:"Follow the incredible transformation from tiny caterpillar to colourful butterfly."},
+      {emoji:"🐢",tag:"Conservation",title:"Why Sea Turtles Matter",text:"A gentle look at sea turtles and why healthy oceans depend on their survival."},
+      {emoji:"🦉",tag:"Birds",title:"Night Watch: The Owl",text:"Meet one of nature's most fascinating nighttime hunters and discover its special skills."}
+    ];
+
+    const container = document.getElementById("posts");
+    const search = document.getElementById("search");
+
+    function render(query=""){
+      const q = query.toLowerCase().trim();
+      const filtered = posts.filter(p => (p.title+" "+p.tag+" "+p.text).toLowerCase().includes(q));
+      container.innerHTML = filtered.length ? filtered.map(p => `
+        <article class="card">
+          <div class="pic">${p.emoji}</div>
+          <div class="card-body">
+            <span class="tag">${p.tag}</span>
+            <h3>${p.title}</h3>
+            <p>${p.text}</p>
+            <a class="read" href="#about" onclick="return false">Read story →</a>
+          </div>
+        </article>`).join("") : '<div class="empty">No stories found. Try another search.</div>';
+    }
+    search.addEventListener("input", e => render(e.target.value));
+    render();
+  </script>
+</body>
+</html>
